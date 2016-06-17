@@ -14,7 +14,7 @@ import javax.swing.JOptionPane;
 public class Student {
 	private String id,pw,name,regDate,gender,ssn; 
 	private int age;
-	public final static String SCHOOL_NAME="한빛학원";
+	
 	
 	public Student(String id,String pw,String name,String ssn) {
 		this.id = id;

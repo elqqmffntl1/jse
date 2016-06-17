@@ -17,7 +17,7 @@ public class Account {
 	private int money;
 	private String id;
 	private String pw;
-	public final static String BANK_NAME="한빛은행";
+	
 	
 	/**
 	 * 
