@@ -1,6 +1,3 @@
-/**
- * 
- */
 package school;
 
 import javax.swing.JOptionPane;
@@ -13,17 +10,24 @@ import javax.swing.JOptionPane;
  */
 public class SchoolController {
 	public static void main(String[] args) { // String[] params
-
-		Student stu = null;
-		int ok = 0;
+    StudentService service = new StudentServiceImpl();
+    int ok = 0;
+		
 		while (true) {
-			switch (JOptionPane.showInputDialog("1.등록2.조회0.종료")) {
+			switch (JOptionPane.showInputDialog("1.등록2.보기3.수정4.삭제0.종료")) {
 			case "1":
-				stu = new Student(JOptionPane.showInputDialog("ID"), JOptionPane.showInputDialog("PW"),
-						JOptionPane.showInputDialog("이름"), JOptionPane.showInputDialog("주민번호"));
+				String stu1 =JOptionPane.showInputDialog("ID,PW,이름,주민번호");
+				String[] stuArr = stu1.split(",");
+				service.registStudent(stuArr[0], stuArr[1], stuArr[2], stuArr[3]);
 				break;
 			case "2":
-				JOptionPane.showMessageDialog(null, stu.toString());
+				JOptionPane.showMessageDialog(null, service.showStudent());
+				break;
+			case "3":
+				String rpw = JOptionPane.showInputDialog("수정값?");
+                service.updateStudent(rpw);
+                break;
+			case "4":
 				break;
 			case "0":
 				ok = JOptionPane.showConfirmDialog(null, "Close OK?");
@@ -32,6 +36,7 @@ public class SchoolController {
 				} else {
 					continue;
 				}
+				
 			default:
 				return;
 			}

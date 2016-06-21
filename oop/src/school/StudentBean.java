@@ -11,12 +11,12 @@ import javax.swing.JOptionPane;
  * @file   :Student.java
  * @story  :
 */
-public class Student {
+public class StudentBean {
 	private String id,pw,name,regDate,gender,ssn; 
 	private int age;
 	
 	
-	public Student(String id,String pw,String name,String ssn) {
+	public StudentBean(String id,String pw,String name,String ssn) {
 		this.id = id;
 		this.pw = pw;
 		this.name = name;
@@ -98,7 +98,7 @@ public class Student {
 	}
 	
 	public String toString() {
-		return "학생 [아이디=" + id + ", 비번=****"  + ", 이름=" + name + ", 등록일=" + regDate + ", 성별=" + gender
+		return "학생 [아이디=" + id + ", 비번=" + pw  + ", 이름=" + name + ", 등록일=" + regDate + ", 성별=" + gender
 				+ ", 주민번호=" + ssn + ", 나이=" + age + "]";
 	}
 	
