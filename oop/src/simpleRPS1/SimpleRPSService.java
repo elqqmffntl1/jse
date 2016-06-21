@@ -1,4 +1,4 @@
-package simpleRps;
+package simpleRPS1;
 
 import java.util.Random;
 
