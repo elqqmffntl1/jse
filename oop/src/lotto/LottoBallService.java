@@ -7,8 +7,7 @@ package lotto;
  * @story :
  */
 public interface LottoBallService {
-    public void setLottoBall(LottoBean lot);
+    public void setLottoBall();
     public int[] getLottoBall();
-    public boolean inDuplication(int num , int i);
     
 }

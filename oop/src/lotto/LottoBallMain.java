@@ -20,7 +20,7 @@ public class LottoBallMain {
     LottoBallService service = new LottoBallServiceImpl();
     StringBuffer buf = new StringBuffer();
     JOptionPane.showMessageDialog(null, "추첨시작?");
-    service.setLottoBall(lot);
+    service.setLottoBall();
     int[] lottoBall = service.getLottoBall();
     for (int i = 0; i < lottoBall.length; i++) {
     	Arrays.sort(lottoBall);

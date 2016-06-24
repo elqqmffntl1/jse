@@ -1,48 +1,48 @@
 package lotto;
 
+import java.util.Arrays;
+
 /**
  * @date : 2016. 6. 24.
  * @author : 한상호
  * @file : LottoBallServiceImpl.java
  * @story :
  */
-public class LottoBallServiceImpl implements LottoBallService {
-
-	private int[] lottoBall;
-
+public class LottoBallServiceImpl implements LottoBallService{
+	private int[] lotto;
+	
+	public LottoBallServiceImpl() {
+		this.lotto = new int[6];
+	}
 	@Override
-	public void setLottoBall(LottoBean lot) {
-		this.lottoBall = new int[6];
-		int i = 0;
-		while (true) {
+	public void setLottoBall() {
+		LottoBean lot = new LottoBean();
+		for (int i = 0; i < lotto.length; i++) {
+			lotto[i] = 0;
+		}
+		for (int i = 0; i < lotto.length; i++) {
 			lot.setNumber();
 			int num = lot.getNumber();
-			this.lottoBall[i] = num;
-			if (inDuplication(num, i)) {
-				continue;
+			boolean exist  = false;
+			for (int j = 0; j < lotto.length; j++) {
+				if (lotto[j]==num) {
+					exist =true;
+					break;
+				}
 			}
-			i++;
-			if (i == lottoBall.length) {
-				i = 0;
-				break;
+			if (exist) {
+				i--;
+				continue;
+			}else{
+				lotto[i]=num;
 			}
 		}
-
+		Arrays.sort(lotto);
+		
 	}
 
 	@Override
 	public int[] getLottoBall() {
-		return lottoBall;
+		return lotto;
 	}
-
-	@Override
-	public boolean inDuplication(int num, int i) {
-		for (int j = 0; j < i; j++) {
-			if (lottoBall[j] == num) {
-				return true;
-			}
-		}
-		return false;
-	}
-
 }
