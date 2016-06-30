@@ -1,6 +1,5 @@
 package gameRps;
 
-import java.util.Random;
 
 public class RPSBean {
     private String play,comp;

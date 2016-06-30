@@ -1,6 +1,5 @@
 package lotto;
 
-import java.util.Random;
 
 /**
  * @date : 2016. 6. 23.

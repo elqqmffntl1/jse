@@ -1,7 +1,6 @@
 package gameRps;
 
 import java.util.Random;
-import java.util.RandomAccess;
 
 public class RPSServiceImpl implements RPSService{
 

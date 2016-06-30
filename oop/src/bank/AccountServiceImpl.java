@@ -1,6 +1,4 @@
-/**
- * 
- */
+
 package bank;
 
 /**
@@ -59,4 +57,3 @@ public class AccountServiceImpl implements AccountService {
 
 	
 }
-

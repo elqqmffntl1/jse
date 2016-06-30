@@ -2,7 +2,7 @@ package grade;
 
 public class GradeBean{
 	private int kor,eng,math;
-	private String name,grade;
+	private String name;
 	
 	public GradeBean(String name, int kor, int eng, int math) {
 		this.name = name;
