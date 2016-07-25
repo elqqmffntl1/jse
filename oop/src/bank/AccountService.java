@@ -8,7 +8,7 @@ package bank;
  * @story  : Service
 */
 public interface AccountService {
-	// 1.개설 2.입금 3.조회 4.출금 5.통장내역 6.해지
+	// 1.개설 2.입금 3.조회 4.출금 5.통장내역 6.해지.
 		// 1.개설
 		public abstract void openAccount(String name,String id,String pw);
 		// 2.입금
