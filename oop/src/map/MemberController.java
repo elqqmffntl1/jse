@@ -13,7 +13,7 @@ public class MemberController {
 		switch (JOptionPane.showInputDialog("---회원이 보는 화면---\n"
 				+"1회원가입 2로그인 3내정보보기(detail) 4내정보수정(비번) 5탈퇴 0종료\n"
 				+"---관리자 화면---\n"
-				+"11회원목록 12검색(ID) 13검색(이름) 14인원수(성별) 15회원수")) {
+				+"11회원목록 12검색(ID) 13검색(이름) 14회원수(성별) 15회원수")) {
 		case "1":
 		    temp = JOptionPane.showInputDialog("id,pw,name,gender");
 			String[] arr = temp.split(",");
@@ -56,7 +56,7 @@ public class MemberController {
 			JOptionPane.showMessageDialog(null, service.countByGender(temp));
 			break;
 		case "15":
-			JOptionPane.showMessageDialog(null, service.count());
+			JOptionPane.showMessageDialog(null, service.count()+"명");
 			break;
 		case "0":
 			return;
